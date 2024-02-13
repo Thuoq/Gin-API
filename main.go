@@ -22,8 +22,9 @@ func main() {
 	dsn := "root:thuong123@tcp(127.0.0.1:3306)/gin-api?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
+	log.Println(":::: db connection", db)
 	//now := time.Now().UTC()
 	//
 	//item := TodoItem{
